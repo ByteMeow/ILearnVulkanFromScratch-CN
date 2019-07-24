@@ -1,0 +1,2424 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>级联阴影映射 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../骨骼动画.html" />
+    
+    
+    <link rel="prev" href="点光源阴影与全向阴影贴图.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../引用.html">
+            
+                <a href="../../引用.html">
+            
+                    
+                    引用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../引用/笔记主要参考来源.html">
+            
+                <a href="../../引用/笔记主要参考来源.html">
+            
+                    
+                    笔记主要参考来源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../引用/参考资料.html">
+            
+                <a href="../../引用/参考资料.html">
+            
+                    
+                    参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Vulkan 命名和使用规范.html">
+            
+                <a href="../../Vulkan 命名和使用规范.html">
+            
+                    
+                    Vulkan 命名和使用规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Vulkan 基础.html">
+            
+                <a href="../../Vulkan 基础.html">
+            
+                    
+                    Vulkan 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Vulkan 基础/准备流程.html">
+            
+                <a href="../../Vulkan 基础/准备流程.html">
+            
+                    
+                    准备流程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../Vulkan 基础/准备流程/工程准备.html">
+            
+                <a href="../../Vulkan 基础/准备流程/工程准备.html">
+            
+                    
+                    工程准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../Vulkan 基础/准备流程/初始化 Vulkan 实例.html">
+            
+                <a href="../../Vulkan 基础/准备流程/初始化 Vulkan 实例.html">
+            
+                    
+                    初始化 Vulkan 实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../Vulkan 基础/准备流程/验证层.html">
+            
+                <a href="../../Vulkan 基础/准备流程/验证层.html">
+            
+                    
+                    验证层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../Vulkan 基础/准备流程/借助 GFLW 创建 Surface.html">
+            
+                <a href="../../Vulkan 基础/准备流程/借助 GFLW 创建 Surface.html">
+            
+                    
+                    借助 GFLW 创建 Surface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../Vulkan 基础/准备流程/指定物理设备.html">
+            
+                <a href="../../Vulkan 基础/准备流程/指定物理设备.html">
+            
+                    
+                    指定物理设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../Vulkan 基础/准备流程/抽象逻辑设备.html">
+            
+                <a href="../../Vulkan 基础/准备流程/抽象逻辑设备.html">
+            
+                    
+                    抽象逻辑设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../../Vulkan 基础/准备流程/Swap Chain.html">
+            
+                <a href="../../Vulkan 基础/准备流程/Swap Chain.html">
+            
+                    
+                    Swap Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../../Vulkan 基础/准备流程/创建 Image View.html">
+            
+                <a href="../../Vulkan 基础/准备流程/创建 Image View.html">
+            
+                    
+                    创建 Image View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../../Vulkan 基础/准备流程/Render Pass.html">
+            
+                <a href="../../Vulkan 基础/准备流程/Render Pass.html">
+            
+                    
+                    Render Pass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../../Vulkan 基础/准备流程/图形流水线.html">
+            
+                <a href="../../Vulkan 基础/准备流程/图形流水线.html">
+            
+                    
+                    图形流水线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../../Vulkan 基础/准备流程/帧缓冲.html">
+            
+                <a href="../../Vulkan 基础/准备流程/帧缓冲.html">
+            
+                    
+                    帧缓冲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../../Vulkan 基础/准备流程/指令缓冲.html">
+            
+                <a href="../../Vulkan 基础/准备流程/指令缓冲.html">
+            
+                    
+                    指令缓冲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.13" data-path="../../Vulkan 基础/准备流程/渲染流程.html">
+            
+                <a href="../../Vulkan 基础/准备流程/渲染流程.html">
+            
+                    
+                    渲染流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.14" data-path="../../Vulkan 基础/准备流程/重建 Swap Chain.html">
+            
+                <a href="../../Vulkan 基础/准备流程/重建 Swap Chain.html">
+            
+                    
+                    重建 Swap Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.15" data-path="../../Vulkan 基础/准备流程/后记.html">
+            
+                <a href="../../Vulkan 基础/准备流程/后记.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Vulkan 基础/绘制几何体.html">
+            
+                <a href="../../Vulkan 基础/绘制几何体.html">
+            
+                    
+                    绘制几何体
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Vulkan 基础/绘制几何体/顶点.html">
+            
+                <a href="../../Vulkan 基础/绘制几何体/顶点.html">
+            
+                    
+                    顶点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../Vulkan 基础/绘制几何体/顶点缓冲.html">
+            
+                <a href="../../Vulkan 基础/绘制几何体/顶点缓冲.html">
+            
+                    
+                    顶点缓冲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../Vulkan 基础/绘制几何体/Staging Buffer.html">
+            
+                <a href="../../Vulkan 基础/绘制几何体/Staging Buffer.html">
+            
+                    
+                    Staging Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../Vulkan 基础/绘制几何体/索引缓冲.html">
+            
+                <a href="../../Vulkan 基础/绘制几何体/索引缓冲.html">
+            
+                    
+                    索引缓冲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../Vulkan 基础/绘制几何体/自定义缓冲内存分配器.html">
+            
+                <a href="../../Vulkan 基础/绘制几何体/自定义缓冲内存分配器.html">
+            
+                    
+                    自定义缓冲内存分配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Vulkan 基础/资源描述与 Uniform 缓冲.html">
+            
+                <a href="../../Vulkan 基础/资源描述与 Uniform 缓冲.html">
+            
+                    
+                    资源描述与 Uniform 缓冲
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Vulkan 基础/资源描述与 Uniform 缓冲/资源描述.html">
+            
+                <a href="../../Vulkan 基础/资源描述与 Uniform 缓冲/资源描述.html">
+            
+                    
+                    资源描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../Vulkan 基础/资源描述与 Uniform 缓冲/UBO.html">
+            
+                <a href="../../Vulkan 基础/资源描述与 Uniform 缓冲/UBO.html">
+            
+                    
+                    UBO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../Vulkan 基础/图像纹理.html">
+            
+                <a href="../../Vulkan 基础/图像纹理.html">
+            
+                    
+                    图像纹理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../Vulkan 基础/图像纹理/流程.html">
+            
+                <a href="../../Vulkan 基础/图像纹理/流程.html">
+            
+                    
+                    流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../Vulkan 基础/图像纹理/从外部加载图像.html">
+            
+                <a href="../../Vulkan 基础/图像纹理/从外部加载图像.html">
+            
+                    
+                    从外部加载图像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../Vulkan 基础/图像纹理/创建图像对象.html">
+            
+                <a href="../../Vulkan 基础/图像纹理/创建图像对象.html">
+            
+                    
+                    创建图像对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../Vulkan 基础/图像纹理/图像视图.html">
+            
+                <a href="../../Vulkan 基础/图像纹理/图像视图.html">
+            
+                    
+                    图像视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../Vulkan 基础/图像纹理/采样器.html">
+            
+                <a href="../../Vulkan 基础/图像纹理/采样器.html">
+            
+                    
+                    采样器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../Vulkan 基础/图像纹理/组合图像采样器.html">
+            
+                <a href="../../Vulkan 基础/图像纹理/组合图像采样器.html">
+            
+                    
+                    组合图像采样器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../Vulkan 基础/图像纹理/纹理坐标.html">
+            
+                <a href="../../Vulkan 基础/图像纹理/纹理坐标.html">
+            
+                    
+                    纹理坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../Vulkan 基础/深度缓冲.html">
+            
+                <a href="../../Vulkan 基础/深度缓冲.html">
+            
+                    
+                    深度缓冲
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../Vulkan 基础/深度缓冲/介绍.html">
+            
+                <a href="../../Vulkan 基础/深度缓冲/介绍.html">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../../Vulkan 基础/深度缓冲/深度缓冲图像.html">
+            
+                <a href="../../Vulkan 基础/深度缓冲/深度缓冲图像.html">
+            
+                    
+                    深度缓冲图像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../../Vulkan 基础/深度缓冲/修改 Render Pass.html">
+            
+                <a href="../../Vulkan 基础/深度缓冲/修改 Render Pass.html">
+            
+                    
+                    修改 Render Pass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../../Vulkan 基础/深度缓冲/帧缓冲.html">
+            
+                <a href="../../Vulkan 基础/深度缓冲/帧缓冲.html">
+            
+                    
+                    帧缓冲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../../Vulkan 基础/深度缓冲/修改流水线.html">
+            
+                <a href="../../Vulkan 基础/深度缓冲/修改流水线.html">
+            
+                    
+                    修改流水线
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../Vulkan 基础/Mipmaps.html">
+            
+                <a href="../../Vulkan 基础/Mipmaps.html">
+            
+                    
+                    Mipmaps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../../Vulkan 基础/Mipmaps/简介.html">
+            
+                <a href="../../Vulkan 基础/Mipmaps/简介.html">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../../Vulkan 基础/Mipmaps/创建 image.html">
+            
+                <a href="../../Vulkan 基础/Mipmaps/创建 image.html">
+            
+                    
+                    创建 image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../../Vulkan 基础/Mipmaps/配置 mipmaps.html">
+            
+                <a href="../../Vulkan 基础/Mipmaps/配置 mipmaps.html">
+            
+                    
+                    配置 mipmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../Vulkan 基础/多重采样.html">
+            
+                <a href="../../Vulkan 基础/多重采样.html">
+            
+                    
+                    多重采样
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="../../Vulkan 基础/多重采样/简介.html">
+            
+                <a href="../../Vulkan 基础/多重采样/简介.html">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="../../Vulkan 基础/多重采样/查询兼容性.html">
+            
+                <a href="../../Vulkan 基础/多重采样/查询兼容性.html">
+            
+                    
+                    查询兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="../../Vulkan 基础/多重采样/离线渲染 Render Target.html">
+            
+                <a href="../../Vulkan 基础/多重采样/离线渲染 Render Target.html">
+            
+                    
+                    离线渲染 Render Target
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="../../Vulkan 基础/多重采样/修改流程.html">
+            
+                <a href="../../Vulkan 基础/多重采样/修改流程.html">
+            
+                    
+                    修改流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="../../Vulkan 基础/多重采样/附加：Sample Shading.html">
+            
+                <a href="../../Vulkan 基础/多重采样/附加：Sample Shading.html">
+            
+                    
+                    附加：Sample Shading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../Vulkan 基础/后记.html">
+            
+                <a href="../../Vulkan 基础/后记.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Vulkan 进阶.html">
+            
+                <a href="../../Vulkan 进阶.html">
+            
+                    
+                    Vulkan 进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../Vulkan 进阶/流水线复用.html">
+            
+                <a href="../../Vulkan 进阶/流水线复用.html">
+            
+                    
+                    流水线复用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../Vulkan 进阶/流水线复用/派生流水线.html">
+            
+                <a href="../../Vulkan 进阶/流水线复用/派生流水线.html">
+            
+                    
+                    派生流水线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../Vulkan 进阶/流水线复用/流水线缓存.html">
+            
+                <a href="../../Vulkan 进阶/流水线复用/流水线缓存.html">
+            
+                    
+                    流水线缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../Vulkan 进阶/向 Shader 传输数据.html">
+            
+                <a href="../../Vulkan 进阶/向 Shader 传输数据.html">
+            
+                    
+                    向 Shader 传输数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../Vulkan 进阶/向 Shader 传输数据/Dynamic Uniform Buffer.html">
+            
+                <a href="../../Vulkan 进阶/向 Shader 传输数据/Dynamic Uniform Buffer.html">
+            
+                    
+                    Dynamic Uniform Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../Vulkan 进阶/Push Constants.md">
+            
+                <span>
+            
+                    
+                    Push Constants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../Vulkan 进阶/向 Shader 传输数据/Push Constants/Specialization Constants.md">
+            
+                <span>
+            
+                    
+                    Specialization Constants
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../Vulkan 进阶/Shader 之间交换数据.html">
+            
+                <a href="../../Vulkan 进阶/Shader 之间交换数据.html">
+            
+                    
+                    Shader 之间交换数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../Vulkan 进阶/Shader 之间交换数据/Storage Buffer.html">
+            
+                <a href="../../Vulkan 进阶/Shader 之间交换数据/Storage Buffer.html">
+            
+                    
+                    Storage Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../Vulkan 进阶/高级纹理.html">
+            
+                <a href="../../Vulkan 进阶/高级纹理.html">
+            
+                    
+                    高级纹理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../../Vulkan 进阶/高级纹理/纹理压缩.html">
+            
+                <a href="../../Vulkan 进阶/高级纹理/纹理压缩.html">
+            
+                    
+                    纹理压缩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="../../Vulkan 进阶/高级纹理/Cubemap.html">
+            
+                <a href="../../Vulkan 进阶/高级纹理/Cubemap.html">
+            
+                    
+                    Cubemap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="../../Vulkan 进阶/高级纹理/Texture Array 和实例化渲染.html">
+            
+                <a href="../../Vulkan 进阶/高级纹理/Texture Array 和实例化渲染.html">
+            
+                    
+                    Texture Array 和实例化渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="../../Vulkan 进阶/高级纹理/三维纹理.html">
+            
+                <a href="../../Vulkan 进阶/高级纹理/三维纹理.html">
+            
+                    
+                    三维纹理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../Vulkan 进阶/实例化渲染.html">
+            
+                <a href="../../Vulkan 进阶/实例化渲染.html">
+            
+                    
+                    实例化渲染
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="../../Vulkan 进阶/实例化渲染/使用 UBO 传递所有实例数据.html">
+            
+                <a href="../../Vulkan 进阶/实例化渲染/使用 UBO 传递所有实例数据.html">
+            
+                    
+                    使用 UBO 传递所有实例数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="../../Vulkan 进阶/实例化渲染/使用 Texture Array 指定实例纹理.html">
+            
+                <a href="../../Vulkan 进阶/实例化渲染/使用 Texture Array 指定实例纹理.html">
+            
+                    
+                    使用 Texture Array 指定实例纹理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="../../Vulkan 进阶/实例化渲染/使用 VAO 传递所有实例数据.html">
+            
+                <a href="../../Vulkan 进阶/实例化渲染/使用 VAO 传递所有实例数据.html">
+            
+                    
+                    使用 VAO 传递所有实例数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../Vulkan 进阶/Subpass.html">
+            
+                <a href="../../Vulkan 进阶/Subpass.html">
+            
+                    
+                    Subpass
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="../../Vulkan 进阶/Subpass/Subpass 初步.html">
+            
+                <a href="../../Vulkan 进阶/Subpass/Subpass 初步.html">
+            
+                    
+                    Subpass 初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.2" data-path="../../Vulkan 进阶/Subpass/Subpass 实战：延迟渲染.html">
+            
+                <a href="../../Vulkan 进阶/Subpass/Subpass 实战：延迟渲染.html">
+            
+                    
+                    Subpass 实战：延迟渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../Vulkan 进阶/离屏渲染.html">
+            
+                <a href="../../Vulkan 进阶/离屏渲染.html">
+            
+                    
+                    离屏渲染
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.7.1" data-path="../../Vulkan 进阶/离屏渲染/渲染流程.html">
+            
+                <a href="../../Vulkan 进阶/离屏渲染/渲染流程.html">
+            
+                    
+                    渲染流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.2" data-path="../../Vulkan 进阶/离屏渲染/渲染资源清单.html">
+            
+                <a href="../../Vulkan 进阶/离屏渲染/渲染资源清单.html">
+            
+                    
+                    渲染资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../Vulkan 进阶/截取屏幕.html">
+            
+                <a href="../../Vulkan 进阶/截取屏幕.html">
+            
+                    
+                    截取屏幕
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../../Vulkan 进阶/截取屏幕/原理.html">
+            
+                <a href="../../Vulkan 进阶/截取屏幕/原理.html">
+            
+                    
+                    原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.2" data-path="../../Vulkan 进阶/截取屏幕/PPM 格式.html">
+            
+                <a href="../../Vulkan 进阶/截取屏幕/PPM 格式.html">
+            
+                    
+                    PPM 格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../Vulkan 进阶/模板缓冲和模板测试.html">
+            
+                <a href="../../Vulkan 进阶/模板缓冲和模板测试.html">
+            
+                    
+                    模板缓冲和模板测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.9.1" data-path="../../Vulkan 进阶/模板缓冲和模板测试/物体描边效果.html">
+            
+                <a href="../../Vulkan 进阶/模板缓冲和模板测试/物体描边效果.html">
+            
+                    
+                    物体描边效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.2" data-path="../../Vulkan 进阶/模板缓冲和模板测试/创建 Stencil Buffer.html">
+            
+                <a href="../../Vulkan 进阶/模板缓冲和模板测试/创建 Stencil Buffer.html">
+            
+                    
+                    创建 Stencil Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.3" data-path="../../Vulkan 进阶/模板缓冲和模板测试/渲染流程.html">
+            
+                <a href="../../Vulkan 进阶/模板缓冲和模板测试/渲染流程.html">
+            
+                    
+                    渲染流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.4" data-path="../../Vulkan 进阶/模板缓冲和模板测试/物体描边 Shader.html">
+            
+                <a href="../../Vulkan 进阶/模板缓冲和模板测试/物体描边 Shader.html">
+            
+                    
+                    物体描边 Shader
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../Vulkan 进阶/使用第三方库加载模型.html">
+            
+                <a href="../../Vulkan 进阶/使用第三方库加载模型.html">
+            
+                    
+                    使用第三方库加载模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.10.1" data-path="../../Vulkan 进阶/使用第三方库加载模型/tiny_obj_loader.html">
+            
+                <a href="../../Vulkan 进阶/使用第三方库加载模型/tiny_obj_loader.html">
+            
+                    
+                    tiny_obj_loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10.2" data-path="../../Vulkan 进阶/使用第三方库加载模型/Open Asset Import Library.html">
+            
+                <a href="../../Vulkan 进阶/使用第三方库加载模型/Open Asset Import Library.html">
+            
+                    
+                    Open Asset Import Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../Vulkan 进阶/Vulkan in Action：CPU 粒子系统.html">
+            
+                <a href="../../Vulkan 进阶/Vulkan in Action：CPU 粒子系统.html">
+            
+                    
+                    Vulkan in Action：CPU 粒子系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.11.1" data-path="../../Vulkan 进阶/Vulkan in Action：CPU 粒子系统/粒子.html">
+            
+                <a href="../../Vulkan 进阶/Vulkan in Action：CPU 粒子系统/粒子.html">
+            
+                    
+                    粒子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.2" data-path="../../Vulkan 进阶/Vulkan in Action：CPU 粒子系统/粒子发射器.html">
+            
+                <a href="../../Vulkan 进阶/Vulkan in Action：CPU 粒子系统/粒子发射器.html">
+            
+                    
+                    粒子发射器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../Vulkan 进阶/Vulkan in Action：简单场景绘制.html">
+            
+                <a href="../../Vulkan 进阶/Vulkan in Action：简单场景绘制.html">
+            
+                    
+                    Vulkan in Action：简单场景绘制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.12.1" data-path="../../Vulkan 进阶/Vulkan in Action：简单场景绘制/渲染资源.html">
+            
+                <a href="../../Vulkan 进阶/Vulkan in Action：简单场景绘制/渲染资源.html">
+            
+                    
+                    渲染资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12.2" data-path="../../Vulkan 进阶/Vulkan in Action：简单场景绘制/渲染流程.html">
+            
+                <a href="../../Vulkan 进阶/Vulkan in Action：简单场景绘制/渲染流程.html">
+            
+                    
+                    渲染流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12.3" data-path="../../Vulkan 进阶/Vulkan in Action：简单场景绘制/总结.html">
+            
+                <a href="../../Vulkan 进阶/Vulkan in Action：简单场景绘制/总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../../Vulkan 进阶/次级指令缓冲和多线程录制.html">
+            
+                <a href="../../Vulkan 进阶/次级指令缓冲和多线程录制.html">
+            
+                    
+                    次级指令缓冲和多线程录制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.13.1" data-path="../../Vulkan 进阶/次级指令缓冲和多线程录制/次级指令缓冲.html">
+            
+                <a href="../../Vulkan 进阶/次级指令缓冲和多线程录制/次级指令缓冲.html">
+            
+                    
+                    次级指令缓冲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.2" data-path="../../Vulkan 进阶/次级指令缓冲和多线程录制/多线程指令缓冲录制.html">
+            
+                <a href="../../Vulkan 进阶/次级指令缓冲和多线程录制/多线程指令缓冲录制.html">
+            
+                    
+                    多线程指令缓冲录制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../../Vulkan 进阶/间接绘制.html">
+            
+                <a href="../../Vulkan 进阶/间接绘制.html">
+            
+                    
+                    间接绘制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.14.1" data-path="../../Vulkan 进阶/间接绘制/离线准备绘制命令.html">
+            
+                <a href="../../Vulkan 进阶/间接绘制/离线准备绘制命令.html">
+            
+                    
+                    离线准备绘制命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14.2" data-path="../../Vulkan 进阶/间接绘制/渲染.html">
+            
+                <a href="../../Vulkan 进阶/间接绘制/渲染.html">
+            
+                    
+                    渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../../Vulkan 进阶/查询.html">
+            
+                <a href="../../Vulkan 进阶/查询.html">
+            
+                    
+                    查询
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.15.1" data-path="../../Vulkan 进阶/查询/查询流程.html">
+            
+                <a href="../../Vulkan 进阶/查询/查询流程.html">
+            
+                    
+                    查询流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15.2" data-path="../../Vulkan 进阶/查询/遮挡查询.html">
+            
+                <a href="../../Vulkan 进阶/查询/遮挡查询.html">
+            
+                    
+                    遮挡查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15.3" data-path="../../Vulkan 进阶/查询/流水线统计数据查询.html">
+            
+                <a href="../../Vulkan 进阶/查询/流水线统计数据查询.html">
+            
+                    
+                    流水线统计数据查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15.4" data-path="../../Vulkan 进阶/查询/时间戳查询.html">
+            
+                <a href="../../Vulkan 进阶/查询/时间戳查询.html">
+            
+                    
+                    时间戳查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../绘制进阶.html">
+            
+                <a href="../../绘制进阶.html">
+            
+                    
+                    绘制进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../光照.html">
+            
+                <a href="../光照.html">
+            
+                    
+                    光照
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../光照/拟真光照模型.html">
+            
+                <a href="../光照/拟真光照模型.html">
+            
+                    
+                    拟真光照模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../光照/光照纹理.html">
+            
+                <a href="../光照/光照纹理.html">
+            
+                    
+                    光照纹理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../光照/基于物理的着色.html">
+            
+                <a href="../光照/基于物理的着色.html">
+            
+                    
+                    基于物理的着色
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../后处理特效.html">
+            
+                <a href="../后处理特效.html">
+            
+                    
+                    后处理特效
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../后处理特效/全屏幕多边形.html">
+            
+                <a href="../后处理特效/全屏幕多边形.html">
+            
+                    
+                    全屏幕多边形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../后处理特效/后处理特效汇总.html">
+            
+                <a href="../后处理特效/后处理特效汇总.html">
+            
+                    
+                    后处理特效汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../HDR.html">
+            
+                <a href="../HDR.html">
+            
+                    
+                    HDR
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../HDR/HDR 简介.html">
+            
+                <a href="../HDR/HDR 简介.html">
+            
+                    
+                    HDR 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../HDR/泛光特效.html">
+            
+                <a href="../HDR/泛光特效.html">
+            
+                    
+                    泛光特效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../HDR/绘制流程.html">
+            
+                <a href="../HDR/绘制流程.html">
+            
+                    
+                    绘制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../阴影.html">
+            
+                <a href="../阴影.html">
+            
+                    
+                    阴影
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="阴影映射.html">
+            
+                <a href="阴影映射.html">
+            
+                    
+                    阴影映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2" data-path="点光源阴影与全向阴影贴图.html">
+            
+                <a href="点光源阴影与全向阴影贴图.html">
+            
+                    
+                    点光源阴影与全向阴影贴图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4.3" data-path="级联阴影映射.html">
+            
+                <a href="级联阴影映射.html">
+            
+                    
+                    级联阴影映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../骨骼动画.html">
+            
+                <a href="../骨骼动画.html">
+            
+                    
+                    骨骼动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../概念汇总.html">
+            
+                <a href="../../概念汇总.html">
+            
+                    
+                    概念汇总
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../概念汇总/设备与逻辑设备.html">
+            
+                <a href="../../概念汇总/设备与逻辑设备.html">
+            
+                    
+                    设备与逻辑设备 Physical / Logical Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../概念汇总/缓冲与图像.html">
+            
+                <a href="../../概念汇总/缓冲与图像.html">
+            
+                    
+                    缓冲与图像 Buffer & Image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../概念汇总/图像布局和排列.html">
+            
+                <a href="../../概念汇总/图像布局和排列.html">
+            
+                    
+                    图像布局和排列 Image Layout & Tiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../概念汇总/指令缓冲.html">
+            
+                <a href="../../概念汇总/指令缓冲.html">
+            
+                    
+                    指令缓冲 Command Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../概念汇总/表面.html">
+            
+                <a href="../../概念汇总/表面.html">
+            
+                    
+                    表面 Surface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../概念汇总/交换链.html">
+            
+                <a href="../../概念汇总/交换链.html">
+            
+                    
+                    交换链 Swap Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../概念汇总/渲染流程和渲染目标.html">
+            
+                <a href="../../概念汇总/渲染流程和渲染目标.html">
+            
+                    
+                    渲染流程和渲染目标 Render Pass & Attachment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../概念汇总/帧缓冲.html">
+            
+                <a href="../../概念汇总/帧缓冲.html">
+            
+                    
+                    帧缓冲 Framebuffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../概念汇总/队列和队列类型.html">
+            
+                <a href="../../概念汇总/队列和队列类型.html">
+            
+                    
+                    队列和队列类型 Queue & Queue Family
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../../概念汇总/视图.html">
+            
+                <a href="../../概念汇总/视图.html">
+            
+                    
+                    视图 View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../../概念汇总/资源描述符集.html">
+            
+                <a href="../../概念汇总/资源描述符集.html">
+            
+                    
+                    资源描述符集 Descriptor Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../../概念汇总/同步.html">
+            
+                <a href="../../概念汇总/同步.html">
+            
+                    
+                    同步 synchronization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../../概念汇总/Shader 的数据流向.html">
+            
+                <a href="../../概念汇总/Shader 的数据流向.html">
+            
+                    
+                    Shader 的数据流向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >级联阴影映射</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7EA7;&#x8054;&#x9634;&#x5F71;&#x6620;&#x5C04;">&#x7EA7;&#x8054;&#x9634;&#x5F71;&#x6620;&#x5C04;</h2>
+<p>Cascaded Shadow Mapping - CSM</p>
+<p><a href="https://johanmedestrom.wordpress.com/2016/03/18/opengl-cascaded-shadow-maps/" target="_blank">https://johanmedestrom.wordpress.com/2016/03/18/opengl-cascaded-shadow-maps/</a></p>
+<p>&#x4E4B;&#x524D;&#x63D0;&#x5230;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x9700;&#x8981;&#x91C7;&#x6837;&#x7684;&#x70B9;&#x4E0D;&#x5728;&#x706F;&#x5149;&#x89C6;&#x9525;&#x4F53;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;&#x91C7;&#x6837;&#x8D8A;&#x754C;&#xFF0C;&#x5BFC;&#x81F4;&#x8FD9;&#x4E9B;&#x533A;&#x57DF;&#x65E0;&#x6CD5;&#x6E32;&#x67D3;&#x9634;&#x5F71;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5728;&#x4F7F;&#x7528;&#x5E73;&#x884C;&#x5149;&#x7167;&#x5C04;&#x7684;&#x5927;&#x573A;&#x666F;&#xFF0C;&#x4F8B;&#x5982;&#x5BA4;&#x5916;&#x573A;&#x666F;&#x4E2D;&#x683C;&#x5916;&#x5E38;&#x89C1;&#xFF1A;&#x6211;&#x4EEC;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x9634;&#x5F71;&#x7684;&#x7CBE;&#x5EA6;&#xFF0C;&#x4F46;&#x5206;&#x8FA8;&#x7387;&#x56E0;&#x4E3A;&#x6027;&#x80FD;&#x539F;&#x56E0;&#x53C8;&#x4E0D;&#x5141;&#x8BB8;&#x6539;&#x53D8;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x6536;&#x7A84;&#x89C6;&#x9525;&#x4F53;&#xFF0C;&#x4F46;&#x662F;&#x5927;&#x573A;&#x666F;&#x6C38;&#x8FDC;&#x4F1A;&#x6709;&#x5904;&#x4E8E;&#x89C6;&#x9525;&#x4F53;&#x5916;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x80FD;&#x5F03;&#x4E4B;&#x4E0D;&#x987E;&#xFF1B;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x5F97;&#x6444;&#x50CF;&#x673A;&#x76EE;&#x529B;&#x6240;&#x53CA;&#x90E8;&#x5206;&#x5168;&#x90E8;&#x6E32;&#x67D3;&#x4E0A;&#x9634;&#x5F71;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x75AF;&#x72C2;&#x589E;&#x52A0;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x5206;&#x8FA8;&#x7387;&#xFF0C;&#x5F53;&#x7136;&#x4F1A;&#x5BFC;&#x81F4;&#x6027;&#x80FD;&#x4E0B;&#x964D;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x79BB;&#x6444;&#x50CF;&#x673A;&#x8F83;&#x8FDC;&#x7684;&#x90E8;&#x5206;&#x5F88;&#x591A;&#x4E0D;&#x9700;&#x8981;&#x90A3;&#x4E48;&#x9AD8;&#x7CBE;&#x5EA6;&#x9634;&#x5F71;&#x5206;&#x8FA8;&#x7387;&#x7684;&#x5730;&#x65B9;&#x4E5F;&#x5728;&#x91C7;&#x6837;&#x9AD8;&#x7CBE;&#x5EA6;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#xFF08;oversampling&#xFF09;&#xFF0C;&#x65E0;&#x8C13;&#x7684;&#x9020;&#x6210;&#x4E86;&#x6027;&#x80FD;&#x7684;&#x6D6A;&#x8D39;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x75AF;&#x72C2;&#x6269;&#x5927;&#x706F;&#x5149;&#x89C6;&#x9525;&#x4F53;&#x5BFC;&#x81F4;&#x6BCF;&#x4E00;&#x5757;&#x533A;&#x57DF;&#x201C;&#x5E73;&#x644A;&#x201D;&#x7684;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x5C0F;&#x7684;&#x53EF;&#x601C;&#x4ECE;&#x800C;&#x4EA7;&#x751F;&#x5927;&#x952F;&#x9F7F;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;&#x79BB;&#x6444;&#x50CF;&#x673A;&#x8FD1;&#x7684;&#x7269;&#x4F53;&#x6765;&#x8BF4;&#x6548;&#x679C;&#x5C06;&#x4F1A;&#x5C24;&#x5176;&#x660E;&#x663E;&#x3002;&#x8FD9;&#x53EF;&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+<p>&#x6211;&#x4EEC;&#x56E0;&#x6B64;&#x603B;&#x7ED3;&#x51FA;&#x51E0;&#x4E2A;&#x9700;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
+<ul>
+<li>&#x5E73;&#x884C;&#x5149;&#x9700;&#x8981;&#x9760;&#x8FD1;&#x6444;&#x50CF;&#x673A;&#x89C6;&#x9525;&#x4F53;&#x4E2D;&#x5FC3;&#xFF0C;&#x8BA9;&#x5176;&#x751F;&#x6210;&#x7684;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x4E0D;&#x4F1A;&#x79BB;&#x6444;&#x50CF;&#x673A;&#x89C2;&#x5BDF;&#x7684;&#x7A7A;&#x95F4;&#x8FC7;&#x8FDC;&#x5BFC;&#x81F4;&#x91C7;&#x6837;&#x8D8A;&#x754C;&#xFF1B;</li>
+<li>&#x5728;&#x5927;&#x573A;&#x666F;&#x4E2D;&#x65E2;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x9634;&#x5F71;&#x8D28;&#x91CF;&#xFF0C;&#x53C8;&#x9700;&#x8981;&#x8986;&#x76D6;&#x9762;&#x5E7F;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5F97;&#x76EE;&#x529B;&#x6240;&#x53CA;&#x7684;&#x5730;&#x65B9;&#x90FD;&#x80FD;&#x591F;&#x6E32;&#x67D3;&#x9634;&#x5F71;&#xFF1B;</li>
+<li>&#x79BB;&#x6444;&#x50CF;&#x673A;&#x8F83;&#x8FDC;&#x7684;&#x7269;&#x4F53;&#x4E0D;&#x7528;&#x91C7;&#x6837;&#x548C;&#x8FD1;&#x5904;&#x5206;&#x8FA8;&#x7387;&#x4E00;&#x6837;&#x9AD8;&#x7684;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#xFF0C;&#x4EE5;&#x8282;&#x7701;&#x6027;&#x80FD;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x65F6;&#xFF0C;&#x7EA7;&#x8054;&#x9634;&#x5F71;&#x6620;&#x5C04;&#x7684;&#x6280;&#x672F;&#x5C31;&#x8BDE;&#x751F;&#x4E86;&#x3002;&#x5176;&#x901A;&#x8FC7;&#x5C06;&#x6444;&#x50CF;&#x673A;&#x89C6;&#x9525;&#x4F53;&#x6309;&#x7167;&#x8FDC;&#x8FD1;&#x5207;&#x5206;&#x4E3A;&#x51E0;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x540C;&#x65F6;&#x5BF9;&#x6BCF;&#x4E00;&#x90E8;&#x5206;&#x90FD;&#x8C03;&#x6574;&#x706F;&#x5149;&#x4F4D;&#x7F6E;&#x548C;&#x706F;&#x5149;&#x89C6;&#x9525;&#x4F53;&#x8303;&#x56F4;&#x6E32;&#x67D3;&#x4E00;&#x5F20;&#x5206;&#x8FA8;&#x7387;&#x76F8;&#x540C;&#x7684;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#xFF0C;&#x706F;&#x5149;&#x89C6;&#x9525;&#x4F53;&#x8986;&#x76D6;&#x8303;&#x56F4;&#x4F9D;&#x7167;&#x8FDC;&#x8FD1;&#x7531;&#x5C0F;&#x5230;&#x5927;&#xFF1B;&#x5728;&#x7269;&#x4F53;&#x91C7;&#x6837;&#x65F6;&#x4E5F;&#x6839;&#x636E;&#x5176;&#x5904;&#x4E8E;&#x89C6;&#x9525;&#x4F53;&#x7684;&#x54EA;&#x4E2A;&#x90E8;&#x5206;&#xFF08;&#x5373;&#x79BB;&#x6444;&#x50CF;&#x673A;&#x7684;&#x8FDC;&#x8FD1;&#xFF09;&#x6765;&#x91C7;&#x6837;&#x5BF9;&#x5E94;&#x7684;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x3002;&#x7247;&#x5143;&#x706F;&#x5149;&#x4F4D;&#x7F6E;&#x548C;&#x89C6;&#x9525;&#x4F53;&#x6302;&#x94A9;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5F97;&#x6444;&#x50CF;&#x673A;&#x89C6;&#x9525;&#x4F53;&#x5185;&#x573A;&#x666F;&#x5168;&#x65B9;&#x4F4D;&#x8986;&#x76D6;&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x51CF;&#x5C11;&#x91C7;&#x6837;&#x8D8A;&#x754C;&#xFF1B;&#x5373;&#x4F7F;&#x8D8A;&#x754C;&#xFF0C;&#x6709;&#x8303;&#x56F4;&#x66F4;&#x5927;&#x7684;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x63A5;&#x7740;&#x3002;&#x540C;&#x65F6;&#x7531;&#x4E8E;&#x51E0;&#x90E8;&#x5206;&#x706F;&#x5149;&#x5206;&#x8FA8;&#x7387;&#x76F8;&#x540C;&#xFF0C;&#x8FDC;&#x5904;&#x7684;&#x7269;&#x4F53;&#xFF0C;&#x5373;&#x5904;&#x4E8E;&#x6444;&#x50CF;&#x673A;&#x8FDC;&#x5904;&#x89C6;&#x9525;&#x4F53;&#x90E8;&#x5206;&#x7684;&#x7247;&#x5143;&#x5206;&#x5F97;&#x7684;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x7CBE;&#x5EA6;&#x5C31;&#x6CA1;&#x90A3;&#x4E48;&#x9AD8;&#x4E86;&#x3002;&#x95EE;&#x9898;&#x5B8C;&#x7F8E;&#x89E3;&#x51B3;&#xFF01;</p>
+<p>&#x4E0B;&#x56FE;&#x4F7F;&#x7528;&#x7EA7;&#x8054;&#x9634;&#x5F71;&#x6620;&#x5C04;&#x6280;&#x672F;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;&#x5E73;&#x884C;&#x5149;&#x7167;&#x5C04;&#x7684;&#x5927;&#x573A;&#x666F;&#xFF0C;&#x5E76;&#x5C06;&#x7EA7;&#x8054;&#x9634;&#x5F71;&#x7684;&#x90E8;&#x5206;&#x901A;&#x8FC7;&#x989C;&#x8272;&#x8FDB;&#x884C;&#x533A;&#x5206;&#x3002;</p>
+<p><img src="Vulkan &#x5B66;&#x4E60;&#x7B14;&#x8BB0;.assets/csmresult.png" alt="csmresult"></p>
+<p>&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x901A;&#x8FC7;&#x6309;&#x8DDD;&#x79BB;&#x5207;&#x5206;&#x5E76;&#x6446;&#x653E;&#x5149;&#x6E90;&#x4F4D;&#x7F6E;&#xFF0C;&#x5149;&#x6E90;&#x5F97;&#x5230;&#x7684;&#x6DF1;&#x5EA6;&#x56FE;&#x8986;&#x76D6;&#x9762;&#x4EE5;&#x6B64;&#x589E;&#x52A0;&#xFF0C;&#x79BB;&#x6444;&#x50CF;&#x673A;&#x8FD1;&#x7684;&#x7247;&#x5143;&#x91C7;&#x6837;&#x706F;&#x5149;&#x89C6;&#x9525;&#x4F53;&#x8303;&#x56F4;&#x5C0F;&#x800C;&#x7CBE;&#x5EA6;&#x9AD8;&#x7684;&#x6DF1;&#x5EA6;&#x56FE;&#xFF1B;&#x79BB;&#x6444;&#x50CF;&#x673A;&#x8FDC;&#x7684;&#x7247;&#x5143;&#x91C7;&#x6837;&#x89C6;&#x9525;&#x4F53;&#x8303;&#x56F4;&#x5927;&#x800C;&#x7CBE;&#x5EA6;&#x4F4E;&#x7684;&#x6DF1;&#x5EA6;&#x56FE;&#xFF0C;&#x65E2;&#x505A;&#x5230;&#x4E86;&#x5168;&#x8986;&#x76D6;&#xFF0C;&#x53C8;&#x505A;&#x5230;&#x4E86;&#x6309;&#x8FDC;&#x8FD1;&#x5206;&#x914D;&#x6DF1;&#x5EA6;&#x56FE;&#x7CBE;&#x5EA6;&#x3002;&#x8FD9;&#x79CD;&#x5E73;&#x884C;&#x7740;&#x8FDC;&#x8FD1;&#x5E73;&#x9762;&#x5207;&#x5206;&#x7684;&#x7EA7;&#x8054;&#x9634;&#x5F71;&#x6620;&#x5C04;&#x88AB;&#x79F0;&#x4E3A; Parallel-Split Shadow Mapping&#xFF0C;&#x5373; PSSM&#x3002;</p>
+<p><img src="Vulkan &#x5B66;&#x4E60;&#x7B14;&#x8BB0;/csm.jpg" alt="csm"></p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5B9E;&#x73B0;&#x7EA7;&#x8054;&#x9634;&#x5F71;&#x6620;&#x5C04;&#x5C31;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x4E09;&#x4E2A;&#x8981;&#x7D20;&#xFF1A;&#x89C6;&#x9525;&#x4F53;&#x7684;&#x5212;&#x5206;&#x3001;&#x706F;&#x5149;&#x7684;&#x6446;&#x653E;&#x548C;&#x7269;&#x4F53;&#x9634;&#x5F71;&#x91C7;&#x6837;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C06;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x7AE0;&#x8282;&#x5206;&#x522B;&#x5BF9;&#x8FD9;&#x4E09;&#x4E2A;&#x8981;&#x7D20;&#x8FDB;&#x884C;&#x8BA8;&#x8BBA;&#x3002;</p>
+<h3 id="&#x89C6;&#x9525;&#x4F53;&#x7684;&#x5212;&#x5206;">&#x89C6;&#x9525;&#x4F53;&#x7684;&#x5212;&#x5206;</h3>
+<p><img src="https://developer.nvidia.com/sites/all/modules/custom/gpugems/books/GPUGems3/elementLinks/10fig02.jpg" alt="10fig02.jpg"></p>
+<p>&#x6211;&#x4EEC;&#x8BE5;&#x5982;&#x4F55;&#x5206;&#x5272;&#x89C6;&#x9525;&#x4F53;&#x4EE5;&#x8FBE;&#x5230;&#x6BCF;&#x5757;&#x9634;&#x5F71;&#x7EB9;&#x7406;&#x7684;&#x9AD8;&#x6548;&#x5229;&#x7528;&#x5462;&#xFF1F;&#x5177;&#x4F53;&#x7684;&#x7B97;&#x6CD5;&#x53EF;&#x4EE5;&#x5728; GPU Gems 3 &#x7684;&#x8FD9;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x5B66;&#x4E60;&#x5230;&#xFF1A;<a href="https://developer.nvidia.com/gpugems/GPUGems3/gpugems3_ch10.html&#x3002;&#x5176;&#x4F7F;&#x7528;&#x4E86;" target="_blank">https://developer.nvidia.com/gpugems/GPUGems3/gpugems3_ch10.html&#x3002;&#x5176;&#x4F7F;&#x7528;&#x4E86;</a> The Practical Split Scheme &#x65B9;&#x6CD5;&#xFF0C;&#x4EE3;&#x7801;&#x603B;&#x7ED3;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">float</span> nearClip = camera.getNearClip();     <span class="hljs-comment">// &#x8FD1;&#x5E73;&#x9762;&#x5230;&#x6444;&#x50CF;&#x673A;&#x8DDD;&#x79BB;</span>
+<span class="hljs-keyword">float</span> farClip = camera.getFarClip();     <span class="hljs-comment">// &#x8FDC;&#x5E73;&#x9762;&#x5230;&#x6444;&#x50CF;&#x673A;&#x8DDD;&#x79BB;</span>
+<span class="hljs-keyword">float</span> clipRange = farClip - nearClip;    <span class="hljs-comment">// &#x8FDC;&#x8FD1;&#x5E73;&#x9762;&#xFF08;&#x5E73;&#x884C;&#x9762;&#xFF09;&#x8DDD;&#x79BB;</span>
+
+<span class="hljs-keyword">float</span> minZ = nearClip;
+<span class="hljs-keyword">float</span> maxZ = nearClip + clipRange;
+<span class="hljs-keyword">float</span> ratio = maxZ / minZ;
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">uint32_t</span> i = <span class="hljs-number">0</span>; i &lt; SHADOW_MAP_CASCADE_COUNT; i++) {
+    <span class="hljs-keyword">float</span> p = (i + <span class="hljs-number">1</span>) / <span class="hljs-keyword">static_cast</span>&lt;<span class="hljs-keyword">float</span>&gt;(SHADOW_MAP_CASCADE_COUNT);
+    <span class="hljs-keyword">float</span> <span class="hljs-built_in">log</span> = minZ * <span class="hljs-built_in">std</span>::<span class="hljs-built_in">pow</span>(ratio, p);
+    <span class="hljs-keyword">float</span> uniform = minZ + clipRange * p;
+    <span class="hljs-keyword">float</span> d = cascadeSplitLambda * (<span class="hljs-built_in">log</span> - uniform) + uniform;
+    cascadeSplits[i] = (d - nearClip) / clipRange; <span class="hljs-comment">// &#x5B58;&#x653E;&#x5207;&#x7247;&#x79BB;&#x8FD1;&#x5E73;&#x9762;&#x5360;&#x8FDC;&#x8FD1;&#x5E73;&#x9762;&#x8DDD;&#x79BB;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x3002;cascadeSplit[COUNT-1]&#x6C38;&#x8FDC;&#x4E3A;1.0&#xFF0C;&#x5373;&#x8FDC;&#x5E73;&#x9762;&#x3002;</span>
+}
+
+<span class="hljs-comment">// DEBUG(cascadeSplits) = {0.0338016897, 0.112979606, 0.334192693, 1.00000000}</span>
+</code></pre>
+<p>&#x63D0;&#x4F9B;&#x5B8C;&#x6574;&#x7684;&#x89C6;&#x9525;&#x4FE1;&#x606F;&#xFF0C;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x5206;&#x5272;&#x6570;&#x91CF;&#x548C;&#x4E00;&#x4E2A; <code>cascadeSplitLambda</code> &#xFF0C;&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x4F18;&#x5316;&#x7684;&#x89C6;&#x9525;&#x4F53;&#x5207;&#x5272;&#x3002;&#x5B8C;&#x6574;&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x5F62;&#x5C06;&#x5728;&#x4E0B;&#x4E00;&#x5F20;&#x4EE3;&#x7801;&#x6BB5;&#x4F53;&#x73B0;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x4E0A;&#x8FF0;&#x4ECB;&#x7ECD;&#x7684;&#x65B9;&#x6CD5;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5212;&#x5206;&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x8F93;&#x5165; cascade split &#x7684;&#x6570;&#x503C;&#xFF08;&#x767E;&#x5206;&#x6570;&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x767E;&#x5206;&#x6570;&#x52A0;&#x8D77;&#x6765;&#x4E3A;1&#xFF0C;&#x8303;&#x56F4;&#x4E3A;&#x6444;&#x50CF;&#x673A;&#x8FD1;&#x5E73;&#x9762;&#x5230;&#x8FDC;&#x5E73;&#x9762;&#x3002;</p>
+<h3 id="&#x706F;&#x5149;&#x7684;&#x6446;&#x653E;&#x548C;&#x6DF1;&#x5EA6;&#x56FE;&#x6E32;&#x67D3;">&#x706F;&#x5149;&#x7684;&#x6446;&#x653E;&#x548C;&#x6DF1;&#x5EA6;&#x56FE;&#x6E32;&#x67D3;</h3>
+<p><img src="Vulkan &#x5B66;&#x4E60;&#x7B14;&#x8BB0;.assets/figure_412.png" alt="figure_412.png"></p>
+<p>&#x89C6;&#x9525;&#x4F53;&#x5206;&#x5272;&#x597D;&#x540E;&#xFF0C;&#x706F;&#x5149;&#x7684;&#x6446;&#x653E;&#x548C;&#x6DF1;&#x5EA6;&#x56FE;&#x6E32;&#x67D3;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><p>&#x5C06;&#x6444;&#x50CF;&#x673A;&#x7684;&#x89C6;&#x9525;&#x4F53;&#x901A;&#x8FC7; VP &#x9006;&#x77E9;&#x9635;&#x8F6C;&#x6362;&#x5230;<strong>&#x4E16;&#x754C;&#x7A7A;&#x95F4;</strong>&#xFF0C;&#x5373;&#x5C06; NDC &#x516B;&#x4E2A;&#x89D2;&#x7684;&#x5750;&#x6807;&#x5DE6;&#x4E58; $P^{-1}$ &#x548C; $V^{-1}$&#x3002;&#x4E4B;&#x540E;&#x6240;&#x6709;&#x8BA1;&#x7B97;&#x5728;&#x4E16;&#x754C;&#x7A7A;&#x95F4;&#x5B8C;&#x6210;&#xFF1B;</p>
+</li>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x5F20;&#xFF08;&#x6216;&#x8986;&#x76D6;&#xFF09;&#x6DF1;&#x5EA6; Texture Array&#xFF0C;<code>layerCount</code> &#x4E3A;&#x7EA7;&#x8054;&#x6570;&#xFF0C;&#x5373;&#x5206;&#x5757;&#x4E2A;&#x6570;&#x3002;&#x4E3A;&#x6BCF;&#x4E00;&#x5206;&#x5757;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Framebuffer&#xFF0C;&#x5185;&#x542B;&#x4E00;&#x4E2A; depth attachment&#xFF0C;&#x8BE5; attachment &#x662F;&#x6DF1;&#x5EA6; Texture Array &#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;</p>
+</li>
+<li><p>&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x90E8;&#x5206;&#xFF08;&#x8BBE;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x4E3A; i&#xFF09;&#xFF1A;</p>
+<ul>
+<li><p>&#x4F9D;&#x7167;&#x521A;&#x521A;&#x8BA1;&#x7B97;&#x51FA;&#x7684;&#x5207;&#x5272;&#x6570;&#x636E;&#xFF0C;&#x5C06;&#x8FDC;&#x5E73;&#x9762;&#x8BBE;&#x4E3A;&#x7B2C; i+1 &#x4E2A;&#x5207;&#x5272;&#x9762;&#xFF08;&#x6216;&#x672C;&#x6765;&#x7684;&#x8FDC;&#x5E73;&#x9762;&#xFF09;&#xFF0C;&#x5C06;&#x8FD1;&#x5E73;&#x9762;&#x8BBE;&#x4E3A;&#x7B2C; i &#x4E2A;&#x5207;&#x5272;&#x9762;&#xFF08;&#x6216;&#x672C;&#x6765;&#x7684;&#x8FD1;&#x5E73;&#x9762;&#xFF09;&#xFF0C;&#x5982;&#x4E0A;&#x56FE; a/b&#xFF1B;</p>
+</li>
+<li><p>&#x7B97;&#x51FA;&#x5207;&#x5272;&#x540E;&#x89C6;&#x9525;&#x4F53;&#x5207;&#x7247;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;&#xFF0C;&#x5373;&#x516B;&#x4E2A;&#x89D2;&#x7684;&#x5750;&#x6807;&#x6C42;&#x5E73;&#x5747;&#x503C;&#xFF1B;</p>
+</li>
+<li><p>&#x8BA1;&#x7B97;&#x89C6;&#x9525;&#x4F53;&#x5207;&#x7247; 8 &#x4E2A;&#x9876;&#x70B9;&#x5230;&#x4E2D;&#x5FC3;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#x6700;&#x5927;&#x503C;&#xFF1B;</p>
+</li>
+<li><p>&#x60F3;&#x8C61;&#x4E00;&#x4E2A;&#x7403;&#x5FC3;&#x4E3A;&#x4E2D;&#x5FC3;&#x70B9;&#xFF0C;&#x534A;&#x5F84;&#x4E3A;&#x4E0A;&#x8FF0;&#x8DDD;&#x79BB;&#x6700;&#x5927;&#x503C;&#x7684;&#x7403;&#xFF0C;&#x5185;&#x5207;&#x8FD9;&#x4E2A;&#x7403;&#x505A;&#x51FA;&#x4E00;&#x4E2A; AABB&#xFF0C;&#x5982;&#x4E0A;&#x56FE; c/d&#xFF1B;</p>
+<p>&#x4E4B;&#x6240;&#x4EE5;&#x79F0;&#x4E4B;&#x4E3A;&#x60F3;&#x8C61;&#xFF0C;&#x56E0;&#x4E3A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5F97;&#x77E5; AABB &#x7684; +x+y+z &#x70B9;&#x5373;&#x4E3A;&#x7403;&#x5FC3;+&#x534A;&#x5F84;&#xFF0C;-x-y-z &#x70B9;&#x5373;&#x4E3A;&#x7403;&#x5FC3;-&#x534A;&#x5F84;&#x3002;</p>
+</li>
+<li><p>&#x5C06;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x706F;&#x5149;&#x7684;&#x4F4D;&#x7F6E;&#x8BBE;&#x4E3A;&#x7403;&#x5FC3;&#xFF0C;&#x5176;&#x65B9;&#x5411;&#x5373;&#x4E3A;&#x5E73;&#x884C;&#x5149;&#x65B9;&#x5411;&#xFF0C;&#x5F97;&#x51FA;&#x4E16;&#x754C;-&gt;&#x89C2;&#x5BDF;&#x7A7A;&#x95F4;&#x53D8;&#x6362;&#x77E9;&#x9635; V&#xFF1B;</p>
+</li>
+<li>&#x865A;&#x62DF;&#x706F;&#x5149;&#x7684;&#x6295;&#x5F71;&#x53D8;&#x6362;&#x77E9;&#x9635;&#x5373;&#x4E3A;&#x4E00;&#x4E2A;&#x548C; AABB &#x76F8;&#x540C;&#x7684;&#x6B63;&#x4EA4;&#x53D8;&#x6362;&#x77E9;&#x9635;&#x3002;</li>
+<li>&#x5C06;&#x8BE5;&#x706F;&#x5149;&#x6E32;&#x67D3;&#x51FA;&#x7684; depth attachment &#x5B58;&#x5728;&#x6DF1;&#x5EA6; Texture Array &#x7684;&#x5BF9;&#x5E94; subresource &#x4E2D;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x5B8C;&#x6574;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">updateCascades</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">float</span> cascadeSplits[SHADOW_MAP_CASCADE_COUNT];
+
+    <span class="hljs-comment">// get frustum info from Camera class instance</span>
+    <span class="hljs-keyword">float</span> nearClip = camera.getNearClip();
+    <span class="hljs-keyword">float</span> farClip = camera.getFarClip();
+    <span class="hljs-keyword">float</span> clipRange = farClip - nearClip;
+
+    <span class="hljs-keyword">float</span> minZ = nearClip;
+    <span class="hljs-keyword">float</span> maxZ = nearClip + clipRange;
+    <span class="hljs-keyword">float</span> ratio = maxZ / minZ;
+
+    <span class="hljs-comment">// Calculate split depths based on view camera furstum (of course in view space, or to say, a linear space)</span>
+    <span class="hljs-comment">// Based on method presented in https://developer.nvidia.com/gpugems/GPUGems3/gpugems3_ch10.html</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">uint32_t</span> i = <span class="hljs-number">0</span>; i &lt; SHADOW_MAP_CASCADE_COUNT; i++) {
+        <span class="hljs-keyword">float</span> p = (i + <span class="hljs-number">1</span>) / <span class="hljs-keyword">static_cast</span>&lt;<span class="hljs-keyword">float</span>&gt;(SHADOW_MAP_CASCADE_COUNT);
+        <span class="hljs-keyword">float</span> <span class="hljs-built_in">log</span> = minZ * <span class="hljs-built_in">std</span>::<span class="hljs-built_in">pow</span>(ratio, p);
+        <span class="hljs-keyword">float</span> uniform = minZ + clipRange * p;
+        <span class="hljs-keyword">float</span> d = cascadeSplitLambda * (<span class="hljs-built_in">log</span> - uniform) + uniform;
+        cascadeSplits[i] = (d - nearClip) / clipRange;
+    }
+
+    <span class="hljs-comment">// Calculate orthographic projection matrix for each cascade</span>
+    <span class="hljs-keyword">float</span> lastSplitDist = <span class="hljs-number">0.0</span>;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">uint32_t</span> i = <span class="hljs-number">0</span>; i &lt; SHADOW_MAP_CASCADE_COUNT; i++) {
+        <span class="hljs-keyword">float</span> splitDist = cascadeSplits[i];
+
+        glm::vec3 frustumCorners[<span class="hljs-number">8</span>] = { <span class="hljs-comment">// currently in NDC</span>
+
+            <span class="hljs-comment">// near plane</span>
+            glm::vec3(<span class="hljs-number">-1.0</span>f,  <span class="hljs-number">1.0f</span>, <span class="hljs-number">-1.0</span>f), <span class="hljs-comment">// upper-left</span>
+            glm::vec3( <span class="hljs-number">1.0f</span>,  <span class="hljs-number">1.0f</span>, <span class="hljs-number">-1.0</span>f), <span class="hljs-comment">// upper-right</span>
+            glm::vec3( <span class="hljs-number">1.0f</span>, <span class="hljs-number">-1.0</span>f, <span class="hljs-number">-1.0</span>f), <span class="hljs-comment">// lower-right</span>
+            glm::vec3(<span class="hljs-number">-1.0</span>f, <span class="hljs-number">-1.0</span>f, <span class="hljs-number">-1.0</span>f), <span class="hljs-comment">// lower-left</span>
+
+            <span class="hljs-comment">// far plane</span>
+            glm::vec3(<span class="hljs-number">-1.0</span>f,  <span class="hljs-number">1.0f</span>,  <span class="hljs-number">1.0f</span>), <span class="hljs-comment">// upper-left</span>
+            glm::vec3( <span class="hljs-number">1.0f</span>,  <span class="hljs-number">1.0f</span>,  <span class="hljs-number">1.0f</span>), <span class="hljs-comment">// upper-right</span>
+            glm::vec3( <span class="hljs-number">1.0f</span>, <span class="hljs-number">-1.0</span>f,  <span class="hljs-number">1.0f</span>), <span class="hljs-comment">// lower-right</span>
+            glm::vec3(<span class="hljs-number">-1.0</span>f, <span class="hljs-number">-1.0</span>f,  <span class="hljs-number">1.0f</span>), <span class="hljs-comment">// lower-left</span>
+        };
+
+        <span class="hljs-comment">// Project frustum corners into world space</span>
+        glm::mat4 invCam = glm::inverse(camera.matrices.perspective * camera.matrices.view);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">uint32_t</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">8</span>; i++) {
+            glm::vec4 invCorner = invCam * glm::vec4(frustumCorners[i], <span class="hljs-number">1.0f</span>);
+            frustumCorners[i] = invCorner / invCorner.w; <span class="hljs-comment">// why persp div?</span>
+        }
+
+        <span class="hljs-comment">// clip the frustum</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">uint32_t</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) {
+            glm::vec3 dist = frustumCorners[i + <span class="hljs-number">4</span>] - frustumCorners[i];     <span class="hljs-comment">// frustum edge, near point -&gt; far point</span>
+            frustumCorners[i + <span class="hljs-number">4</span>] = frustumCorners[i] + (dist * splitDist); <span class="hljs-comment">// make far plane nearer according to splitDist</span>
+            frustumCorners[i] = frustumCorners[i] + (dist * lastSplitDist); <span class="hljs-comment">// make near plane far away to the LAST frustum&apos;s far plane</span>
+        }
+
+        <span class="hljs-comment">// Get frustum center point</span>
+        glm::vec3 frustumCenter = glm::vec3(<span class="hljs-number">0.0f</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">uint32_t</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">8</span>; i++) {
+            frustumCenter += frustumCorners[i];
+        }
+        frustumCenter /= <span class="hljs-number">8.0f</span>;
+
+        <span class="hljs-comment">// Find the longest radius of the frustum</span>
+        <span class="hljs-keyword">float</span> radius = <span class="hljs-number">0.0f</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">uint32_t</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">8</span>; i++) {
+            <span class="hljs-keyword">float</span> distance = glm::length(frustumCorners[i] - frustumCenter);
+            radius = glm::max(radius, distance);
+        }
+        radius = <span class="hljs-built_in">std</span>::<span class="hljs-built_in">ceil</span>(radius * <span class="hljs-number">16.0f</span>) / <span class="hljs-number">16.0f</span>;
+
+        <span class="hljs-comment">// Create an AABB around the sphere formed by the radius</span>
+        glm::vec3 maxExtents = glm::vec3(radius); <span class="hljs-comment">// AABB +x+y+z corner</span>
+        glm::vec3 minExtents = -maxExtents;       <span class="hljs-comment">// AABB -x-y-z corner</span>
+
+        <span class="hljs-comment">// Position the light for each frustum</span>
+        glm::vec3 lightDir = normalize(-lightPos); <span class="hljs-comment">// pos -&gt; origin (only in this example)</span>
+        glm::mat4 lightViewMatrix = glm::lookAt(frustumCenter - lightDir * -minExtents.z, frustumCenter, glm::vec3(<span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>)); <span class="hljs-comment">// look at frustum center</span>
+        glm::mat4 lightOrthoMatrix = glm::ortho(minExtents.x, maxExtents.x, minExtents.y, maxExtents.y, <span class="hljs-number">0.0f</span>, maxExtents.z - minExtents.z); <span class="hljs-comment">// just use the AABB</span>
+
+        <span class="hljs-comment">// Store split distance and matrix in cascade</span>
+        cascades[i].splitDepth = (camera.getNearClip() + splitDist * clipRange) * <span class="hljs-number">-1.0</span>f;
+        cascades[i].viewProjMatrix = lightOrthoMatrix * lightViewMatrix;
+
+        lastSplitDist = cascadeSplits[i];
+    }
+}
+</code></pre>
+<p>// TODO&#xFF1A;&#x4E3A;&#x4EC0;&#x4E48;&#x900F;&#x89C6;&#x9664;&#x6CD5;&#x3001;&#x539F;&#x7406;&#x662F;&#x4EC0;&#x4E48;</p>
+<p>&#x540C;&#x9634;&#x5F71;&#x6620;&#x5C04;&#x4ECB;&#x7ECD;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x6B64;&#x5904;&#x4E5F;&#x53EF;&#x4EE5;&#x91C7;&#x7528; Geometry Shader &#x514B;&#x9686;&#x9876;&#x70B9;&#x5E76;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x77E9;&#x9635;&#x8FDB;&#x884C;&#x53D8;&#x6362;&#xFF08;Geometry Shader Cloning&#xFF0C;&#x4E00;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#x8282;&#x7701; pass &#x6280;&#x672F;&#xFF09;&#xFF0C;&#x5C06; pass &#x6570;&#x91CF;&#x5C06;&#x4E3A; 1&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x4F7F;&#x7528; Vulkan &#x7684; Layered Framebuffer &#x4E5F;&#x53EF;&#x4EE5;&#x5C06; Framebuffer &#x7684;&#x4E2A;&#x6570;&#x5C06;&#x4E3A; 1&#x3002;&#x8FD9;&#x91CC;&#x4E3A;&#x4E86;&#x6E05;&#x6670;&#x76F4;&#x89C2;&#x4E0D;&#x8003;&#x8651;&#x4F18;&#x5316;&#x95EE;&#x9898;&#x3002;</p>
+<h3 id="&#x7269;&#x4F53;&#x9634;&#x5F71;&#x91C7;&#x6837;">&#x7269;&#x4F53;&#x9634;&#x5F71;&#x91C7;&#x6837;</h3>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x6B65;&#x9AA4;&#xFF0C;&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x4E86;&#x4E00;&#x4E2A; Texture Array&#xFF08;&#x5373;&#x5728;&#x7247;&#x5143;&#x7740;&#x8272;&#x5668;&#x4E2D;&#x7684; <code>sampler2DArray</code>&#xFF09;&#xFF0C;&#x5185;&#x90E8;&#x5B58;&#x6709;&#x6240;&#x6709;&#x5206;&#x5757;&#x7684;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x3002;&#x5728;&#x6E32;&#x67D3;&#x573A;&#x666F;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x3001;&#x5206;&#x5757;&#x53C2;&#x6570;&#x548C;&#x6240;&#x6709;&#x5206;&#x5757;&#x706F;&#x5149;&#x7684;&#x53D8;&#x6362;&#x77E9;&#x9635;&#xFF0C;&#x6839;&#x636E;&#x7247;&#x5143;&#x6DF1;&#x5EA6;&#x8BA1;&#x7B97;&#x9700;&#x8981;&#x91C7;&#x6837;&#x7684;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x5E76;&#x7ED3;&#x5408;&#x7740;&#x57FA;&#x7840;&#x7684;&#x9634;&#x5F71;&#x6620;&#x5C04;&#x6B65;&#x9AA4;&#x8FDB;&#x884C;&#x91C7;&#x6837;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5728;&#x63A5;&#x53D7;&#x9634;&#x5F71;&#x7684;&#x6750;&#x8D28; Fragment Shader &#x4E2D;&#x6211;&#x4EEC;&#x7B97;&#x51FA;&#x6240;&#x5C5E;&#x7684; cascade &#x5206;&#x5757;&#xFF0C;&#x5373;&#x53EF;&#x6B63;&#x5E38;&#x8FDB;&#x884C;&#x9634;&#x5F71;&#x91C7;&#x6837;&#x3002;&#x6CE8;&#x610F; <code>texture</code> &#x51FD;&#x6570;&#x8FD9;&#x6B21;&#x4F7F;&#x7528; UVW &#x7248;&#x672C;&#x91CD;&#x8F7D;&#xFF0C;W &#x5206;&#x91CF;&#x4EE3;&#x8868;&#x7EB9;&#x7406;&#x6570;&#x7EC4;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5373;&#x8BA1;&#x7B97;&#x51FA;&#x7684; <code>cascadeIndex</code>&#xFF1A;</p>
+<pre><code class="lang-glsl"><span class="hljs-comment">// &#x89C2;&#x5BDF;&#x7A7A;&#x95F4;&#x7247;&#x5143;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E0E;cascadeSplit&#x6570;&#x7EC4;&#x5BF9;&#x5E94;&#xFF0C;&#x5176;&#x6DF1;&#x5EA6;&#x6B63;&#x597D;&#x5BF9;&#x5E94;&#x7740;cascadeSplits&#xFF0C;&#x5373;&#x6DF1;&#x5EA6;&#x5360;&#x6BD4;&#xFF08;&#x8303;&#x56F4;[0, 1]&#xFF09;&#x3002;</span>
+<span class="hljs-keyword">layout</span> (<span class="hljs-keyword">location</span> = x) <span class="hljs-keyword">in</span> <span class="hljs-type">vec3</span> inViewPos;
+
+<span class="hljs-comment">// NDC -&gt; UVW</span>
+<span class="hljs-keyword">const</span> <span class="hljs-type">mat4</span> biasMat = <span class="hljs-type">mat4</span>( 
+    <span class="hljs-number">0.5</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>,
+    <span class="hljs-number">0.0</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>,
+    <span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">0.0</span>,
+    <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span> 
+);
+
+<span class="hljs-type">int</span> main() {
+
+    <span class="hljs-comment">// calc the cascade fragment belongs to</span>
+    <span class="hljs-type">uint</span> cascadeIndex = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">uint</span> i = <span class="hljs-number">0</span>; i &lt; SHADOW_MAP_CASCADE_COUNT - <span class="hljs-number">1</span>; ++i) {
+        <span class="hljs-keyword">if</span>(inViewPos.z &lt; cascadeSplits[i]) {    
+            cascadeIndex = i + <span class="hljs-number">1</span>;
+        }
+    }
+
+    <span class="hljs-comment">// </span>
+    <span class="hljs-type">vec4</span> shadowCoord = biasMat * ubo.cascadeViewProjMat[cascadeIndex] * <span class="hljs-type">vec4</span>(inPos, <span class="hljs-number">1.0</span>);
+
+    ... <span class="hljs-comment">// Doing depth sampling or PCF filtering as normal</span>
+}
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x6CE8;&#x610F;&#x8BA1;&#x7B97;&#x9634;&#x5F71;&#x8D34;&#x56FE;&#x5750;&#x6807;&#x65F6;&#x51FA;&#x73B0;&#x7684;&#x504F;&#x79FB;&#x77E9;&#x9635; <code>biasMat</code>&#xFF0C;&#x540C;&#x6837;&#x5B9E;&#x73B0;&#x4E86;&#x4E4B;&#x524D;&#x9634;&#x5F71;&#x6620;&#x5C04;&#x65F6;&#x201D;&#x5C06;&#x8FD9;&#x4E9B;&#x5750;&#x6807; xy &#x5206;&#x91CF; * 0.5 + 0.5 &#x518D;&#x91C7;&#x6837;&#x201C;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5C06; NDC &#x5750;&#x6807;&#x53D8;&#x6362;&#x4E3A; UV &#x5750;&#x6807;&#x7684; [0, 1] &#x8303;&#x56F4;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="点光源阴影与全向阴影贴图.html" class="navigation navigation-prev " aria-label="Previous page: 点光源阴影与全向阴影贴图">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../骨骼动画.html" class="navigation navigation-next " aria-label="Next page: 骨骼动画">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"级联阴影映射","level":"1.6.4.3","depth":3,"next":{"title":"骨骼动画","level":"1.6.5","depth":2,"path":"mdroot/绘制进阶/骨骼动画.md","ref":"mdroot/绘制进阶/骨骼动画.md","articles":[]},"previous":{"title":"点光源阴影与全向阴影贴图","level":"1.6.4.2","depth":3,"path":"mdroot/绘制进阶/阴影/点光源阴影与全向阴影贴图.md","ref":"mdroot/绘制进阶/阴影/点光源阴影与全向阴影贴图.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mdroot/绘制进阶/阴影/级联阴影映射.md","mtime":"2019-07-23T16:39:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-24T07:02:29.860Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
