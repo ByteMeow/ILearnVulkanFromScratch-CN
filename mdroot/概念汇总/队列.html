@@ -1680,12 +1680,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.11.3" data-path="../Vulkan 进阶/Compute Shader/GPU 粒子系统.html">
+        <li class="chapter " data-level="1.5.11.3" data-path="../Vulkan 进阶/Compute Shader/GPU 粒子系统初步.html">
             
-                <a href="../Vulkan 进阶/Compute Shader/GPU 粒子系统.html">
+                <a href="../Vulkan 进阶/Compute Shader/GPU 粒子系统初步.html">
             
                     
-                    GPU 粒子系统
+                    GPU 粒子系统初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.4" data-path="../Vulkan 进阶/Compute Shader/GPU 粒子系统进阶：N体模拟.html">
+            
+                <a href="../Vulkan 进阶/Compute Shader/GPU 粒子系统进阶：N体模拟.html">
+            
+                    
+                    GPU 粒子系统进阶：N体模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.5" data-path="../Vulkan 进阶/Compute Shader/光线追踪.html">
+            
+                <a href="../Vulkan 进阶/Compute Shader/光线追踪.html">
+            
+                    
+                    光线追踪
             
                 </a>
             
@@ -2218,7 +2244,7 @@
 </table>
 <p>&#x63D0;&#x4EA4;&#x5230;&#x4E0D;&#x540C;&#x961F;&#x5217;&#x7684; command buffer &#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x4E0D;&#x4F1A;&#x4FDD;&#x8BC1;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x3002;&#x63D0;&#x4EA4;&#x5230;&#x540C;&#x4E00;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x4F1A;&#x987A;&#x5E8F;&#x6267;&#x884C;&#xFF0C;&#x4F46;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x4ECD;&#x7136;&#x662F;&#x5E76;&#x884C;&#x7684;&#xFF0C;&#x5373;&#x63D0;&#x4EA4;&#x6307;&#x4EE4;&#x4E0D;&#x963B;&#x585E;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x3002;&#x56E0;&#x6B64;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x663E;&#x793A;&#x8BBE;&#x5907;&#x4EE5;&#x53CA;&#x4E0D;&#x540C;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x5E76;&#x884C;&#x63A7;&#x5236;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x884C;&#x3002;</p>
 <p>Vulkan &#x62BD;&#x8C61;&#x51FA;&#x7684;&#x961F;&#x5217;&#x6570;&#x91CF;&#x5728;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#x5E76;&#x4E0D;&#x7B49;&#x540C;&#x4E8E;&#x786C;&#x4EF6;&#x7684;&#x961F;&#x5217;&#x6570;&#x91CF;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x521B;&#x5EFA;&#x961F;&#x5217;&#x65F6;&#x9700;&#x8981;&#x641E;&#x6E05;&#x695A;&#x76EE;&#x6807;&#x786C;&#x4EF6;&#x7684;&#x5177;&#x4F53;&#x961F;&#x5217;&#x6570;&#x91CF;&#xFF0C;&#x56E0;&#x4E3A;&#x521B;&#x5EFA;&#x8FC7;&#x591A;&#x7684;&#x961F;&#x5217;&#x6700;&#x7EC8;&#x4E5F;&#x4F1A;&#x88AB;&#x5B89;&#x6392;&#x5230;&#x4E00;&#x4E2A;&#x786C;&#x4EF6;&#x961F;&#x5217;&#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x6027;&#x80FD;&#x5F97;&#x4E0D;&#x5230;&#x4EFB;&#x4F55;&#x63D0;&#x5347;&#xFF0C;&#x5E76;&#x4E14;&#x5F88;&#x53EF;&#x80FD;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x540C;&#x6B65;&#x800C;&#x635F;&#x5931;&#x6027;&#x80FD;&#x3002;&#x6EE1;&#x8DB3; WDDM &#x7684;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x4F1A;&#x5411; Windows &#x63D0;&#x4F9B;&#x5177;&#x4F53;&#x7684;&#x786C;&#x4EF6;&#x961F;&#x5217;&#xFF08;&#x5F53;&#x7136;&#x4E5F;&#x662F;&#x9A71;&#x52A8;&#x62BD;&#x8C61;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x518D;&#x5F80;&#x4E0B;&#x5C31;&#x4E0D;&#x662F;&#x80FD;&#x770B;&#x5F97;&#x5230;&#x7684;&#x4E86;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; GPUView &#x770B;&#x5230;&#x6BCF;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x7684;&#x6267;&#x884C;&#x56FE;&#x8868;&#x6765;&#x5206;&#x6790;&#x4EFB;&#x52A1;&#x662F;&#x5426;&#x6709;&#x6548;&#x7684;&#x5728;&#x4E0D;&#x540C;&#x961F;&#x5217;&#x4E0A;&#x5E76;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x81EA;&#x5E26;&#x7684;&#x4EFB;&#x52A1;&#x7BA1;&#x7406;&#x5668;&#x67E5;&#x770B; GPU Tabs &#x4E2D;&#x7684;&#x786C;&#x4EF6;&#x961F;&#x5217;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF08;&#x6B64;&#x5904;&#x79F0;&#x4E3A;&#x201C;&#x5F15;&#x64CE;&#x201D;&#xFF09;&#x3002;</p>
-<p>&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x961F;&#x5217;&#x8FDB;&#x884C;&#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x4E5F;&#x4F1A;&#x56E0;&#x4E3A;&#x786C;&#x4EF6;&#x5DEE;&#x5F02;&#x5E26;&#x6765;&#x5F88;&#x5C0F;&#x5374;&#x81F4;&#x547D;&#x7684;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x3002;&#x5177;&#x4F53;&#x5B9E;&#x8DF5;&#x53EF;&#x53C2;&#x8003; <a href="https://gpuopen.com/concurrent-execution-asynchronous-queues/&#x3002;&#x901A;&#x5E38;&#x7684;&#x505A;&#x6CD5;&#xFF08;&#x6B63;&#x50CF;&#x5F88;&#x591A;&#x5728;" target="_blank">https://gpuopen.com/concurrent-execution-asynchronous-queues/&#x3002;&#x901A;&#x5E38;&#x7684;&#x505A;&#x6CD5;&#xFF08;&#x6B63;&#x50CF;&#x5F88;&#x591A;&#x5728;</a> Windows &#x5E73;&#x53F0;&#x4F7F;&#x7528;&#x4E86; DX12 &#x7684;&#x6E38;&#x620F;&#x4E00;&#x6837;&#xFF09;&#xFF0C;&#x63D0;&#x4F9B;&#x4E24;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4F7F;&#x7528; Async Compute &#x548C;&#x4E0D;&#x4F7F;&#x7528;&#xFF0C;&#x5E76;&#x5206;&#x522B; Benchmark &#x5B83;&#x4EEC;&#x6765;&#x627E;&#x5230;&#x6700;&#x4F73;&#x7684;&#x5E73;&#x8861;&#x70B9;&#x3002;</p>
+<p>&#x4F46;&#x65F6;&#xFF0C;&#x7531;&#x4E8E;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B; GPU &#x66B4;&#x9732;&#x51FA;&#x7684;&#x4E0D;&#x540C;&#x786C;&#x4EF6;&#x961F;&#x5217;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x6267;&#x884C;&#x5355;&#x5143;&#x90FD;&#x662F;<strong>&#x5171;&#x4EAB;</strong>&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4F1A;&#x5F71;&#x54CD;&#x53E6;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x5BFC;&#x81F4;&#x5176;&#x6548;&#x7387;&#x8DDF;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x63D0;&#x4EA4;&#x5404;&#x79CD;&#x4EFB;&#x52A1;&#x5E76;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF0C;&#x540C;&#x65F6;&#x4E0D;&#x540C;&#x786C;&#x4EF6;&#x7684;&#x5B9E;&#x73B0;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x5F88;&#x5927;&#x7684;&#x5DEE;&#x522B;&#x3002;&#x5177;&#x4F53;&#x5B9E;&#x8DF5;&#x53EF;&#x53C2;&#x8003; <a href="https://gpuopen.com/concurrent-execution-asynchronous-queues/&#x3002;&#x901A;&#x5E38;&#x7684;&#x505A;&#x6CD5;&#xFF08;&#x6B63;&#x50CF;&#x5F88;&#x591A;&#x5728;" target="_blank">https://gpuopen.com/concurrent-execution-asynchronous-queues/&#x3002;&#x901A;&#x5E38;&#x7684;&#x505A;&#x6CD5;&#xFF08;&#x6B63;&#x50CF;&#x5F88;&#x591A;&#x5728;</a> Windows &#x5E73;&#x53F0;&#x4F7F;&#x7528;&#x4E86; DX12 &#x7684;&#x6E38;&#x620F;&#x4E00;&#x6837;&#xFF09;&#xFF0C;&#x63D0;&#x4F9B;&#x4E24;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4F7F;&#x7528; Async Compute &#x548C;&#x4E0D;&#x4F7F;&#x7528;&#xFF0C;&#x5E76;&#x5206;&#x522B; Benchmark &#x5B83;&#x4EEC;&#x6765;&#x627E;&#x5230;&#x6700;&#x4F73;&#x7684;&#x5E73;&#x8861;&#x70B9;&#x3002;</p>
 
                                 
                                 </section>
@@ -2262,7 +2288,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"队列 Queue","level":"1.7.9","depth":2,"next":{"title":"视图 View","level":"1.7.10","depth":2,"path":"mdroot/概念汇总/视图.md","ref":"mdroot/概念汇总/视图.md","articles":[]},"previous":{"title":"帧缓冲 Framebuffer","level":"1.7.8","depth":2,"path":"mdroot/概念汇总/帧缓冲.md","ref":"mdroot/概念汇总/帧缓冲.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","github-buttons","expandable-chapters-small","splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github-buttons":{"buttons":[{"user":"GavinKG","repo":"ILearnVulkanFromScratch-CN","type":"star","size":"small"}]},"expandable-chapters-small":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gavin KG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vulkan 学习笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"mdroot/概念汇总/队列.md","mtime":"2019-07-27T13:02:54.676Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-28T08:21:14.502Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"队列 Queue","level":"1.7.9","depth":2,"next":{"title":"视图 View","level":"1.7.10","depth":2,"path":"mdroot/概念汇总/视图.md","ref":"mdroot/概念汇总/视图.md","articles":[]},"previous":{"title":"帧缓冲 Framebuffer","level":"1.7.8","depth":2,"path":"mdroot/概念汇总/帧缓冲.md","ref":"mdroot/概念汇总/帧缓冲.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","github-buttons","expandable-chapters-small","splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github-buttons":{"buttons":[{"user":"GavinKG","repo":"ILearnVulkanFromScratch-CN","type":"star","size":"small"}]},"expandable-chapters-small":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gavin KG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vulkan 学习笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"mdroot/概念汇总/队列.md","mtime":"2019-07-29T05:06:27.788Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-29T15:29:41.572Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

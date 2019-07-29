@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>GPU 粒子系统 · Vulkan 学习笔记</title>
+        <title>GPU 粒子系统初步 · Vulkan 学习笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -66,7 +66,7 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../绘制进阶.html" />
+    <link rel="next" href="GPU 粒子系统进阶：N体模拟.html" />
     
     
     <link rel="prev" href="Shader 初见：图像处理.html" />
@@ -1680,12 +1680,38 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.11.3" data-path="GPU 粒子系统.html">
+        <li class="chapter active" data-level="1.5.11.3" data-path="GPU 粒子系统初步.html">
             
-                <a href="GPU 粒子系统.html">
+                <a href="GPU 粒子系统初步.html">
             
                     
-                    GPU 粒子系统
+                    GPU 粒子系统初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.4" data-path="GPU 粒子系统进阶：N体模拟.html">
+            
+                <a href="GPU 粒子系统进阶：N体模拟.html">
+            
+                    
+                    GPU 粒子系统进阶：N体模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.5" data-path="光线追踪.html">
+            
+                <a href="光线追踪.html">
+            
+                    
+                    光线追踪
             
                 </a>
             
@@ -2166,7 +2192,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >GPU 粒子系统</a>
+        <a href="../../.." >GPU 粒子系统初步</a>
     </h1>
 </div>
 
@@ -2181,7 +2207,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="gpu-&#x7C92;&#x5B50;&#x7CFB;&#x7EDF;">GPU &#x7C92;&#x5B50;&#x7CFB;&#x7EDF;</h2>
+                                <h2 id="gpu-&#x7C92;&#x5B50;&#x7CFB;&#x7EDF;&#x521D;&#x6B65;">GPU &#x7C92;&#x5B50;&#x7CFB;&#x7EDF;&#x521D;&#x6B65;</h2>
 <p>&#x5728;&#x8BE5;&#x6848;&#x4F8B;&#x4E2D;&#xFF0C;GPU &#x7C92;&#x5B50;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528; Compute Shader &#x53C2;&#x8003;&#x4F20;&#x5165;&#x7684; UBO &#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x6A21;&#x62DF;&#x7C92;&#x5B50;&#x7684;&#x884C;&#x4E3A;&#x5E76;&#x5C06;&#x7C92;&#x5B50;&#x4FE1;&#x606F;&#x5B58;&#x5728;&#x8BBE;&#x5907;&#x4E13;&#x5C5E;&#x7684; SSBO &#x4E2D;&#xFF0C;&#x5E76;&#x5728;&#x7ED8;&#x56FE;&#x65F6;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A; Buffer &#x4F5C;&#x4E3A;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x7F13;&#x51B2;&#x5C06;&#x9876;&#x70B9;&#x7ED8;&#x5236;&#x51FA;&#x6765;&#x3002;&#x5728;&#x4ECB;&#x7ECD;&#x6574;&#x5957;&#x7CFB;&#x7EDF;&#x7684;&#x6D41;&#x7A0B;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x8BA8;&#x8BBA;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x7F13;&#x51B2;&#x7C7B;&#x578B;&#xFF1A;SSBO&#xFF0C;&#x8FDB;&#x800C;&#x8BA8;&#x8BBA;&#x8BA1;&#x7B97;&#x961F;&#x5217;&#x548C;&#x56FE;&#x50CF;&#x961F;&#x5217;&#x7684;&#x540C;&#x6B65;&#x673A;&#x5236;&#xFF0C;&#x6700;&#x7EC8;&#x63CF;&#x8FF0;&#x8BE5;&#x6848;&#x4F8B;&#x7684;&#x7C92;&#x5B50;&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x3002;</p>
 <h3 id="ssbo">SSBO</h3>
 <p>SSBO&#xFF0C;&#x5373; Shader Storage Buffer Object&#xFF0C;&#x4E00;&#x822C;&#x4E5F;&#x76F4;&#x63A5;&#x79F0;&#x4E4B;&#x4E3A; Storage Buffer&#xFF0C;&#x4E5F;&#x662F; Buffer &#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x79CD;&#xFF0C;&#x5176;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x4F9B; Shader &#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#x3002;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x4E00;&#x6B21;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x591A;&#x6B21; GPU &#x4F7F;&#x7528;&#x7684; Buffer&#xFF0C;&#x5176;&#x521B;&#x5EFA;&#x65B9;&#x6CD5;&#x548C;&#x4E4B;&#x524D;&#x6D89;&#x53CA;&#x5230;&#x7684; Buffer &#x5E76;&#x6CA1;&#x6709;&#x533A;&#x522B;&#xFF0C;&#x90FD;&#x662F;&#x5148;&#x5728;&#x672C;&#x5730; staging &#x518D; copy &#x5230;&#x8FD9;&#x4E2A;&#x4EC5;&#x8BBE;&#x5907;&#x53EF;&#x89C1;&#x7684; Buffer &#x4E2D;&#x3002;&#x4E3A;&#x4E86;&#x4F53;&#x73B0;&#x51FA;&#x5176; Storage Buffer &#x7684;&#x7279;&#x6027;&#xFF0C;&#x5728;&#x521B;&#x5EFA;&#x8FD9;&#x4E2A;&#x4EC5;&#x8BBE;&#x5907;&#x53EF;&#x89C1;&#x7684; Buffer &#x65F6;&#xFF0C;<code>usageFlags</code> &#x8981;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A; <code>VK_BUFFER_USAGE_STORAGE_BUFFER_BIT</code>&#xFF0C;&#x5F53;&#x7136;&#x4F5C;&#x4E3A;&#x62F7;&#x8D1D;&#x7684;&#x76EE;&#x6807;&#x7F13;&#x51B2;&#xFF0C;&#x4E5F;&#x5F97;&#x6709; <code>VK_BUFFER_USAGE_TRANSFER_DST_BIT</code>&#x3002;</p>
@@ -2262,7 +2288,7 @@ Compute  *|-----------Compute-----------[x]
                 </a>
                 
                 
-                <a href="../../绘制进阶.html" class="navigation navigation-next " aria-label="Next page: 绘制进阶">
+                <a href="GPU 粒子系统进阶：N体模拟.html" class="navigation navigation-next " aria-label="Next page: GPU 粒子系统进阶：N体模拟">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2273,7 +2299,7 @@ Compute  *|-----------Compute-----------[x]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GPU 粒子系统","level":"1.5.11.3","depth":3,"next":{"title":"绘制进阶","level":"1.6","depth":1,"path":"mdroot/绘制进阶.md","ref":"mdroot/绘制进阶.md","articles":[{"title":"光照","level":"1.6.1","depth":2,"path":"mdroot/绘制进阶/光照.md","ref":"mdroot/绘制进阶/光照.md","articles":[{"title":"拟真光照模型","level":"1.6.1.1","depth":3,"path":"mdroot/绘制进阶/光照/拟真光照模型.md","ref":"mdroot/绘制进阶/光照/拟真光照模型.md","articles":[]},{"title":"光照纹理","level":"1.6.1.2","depth":3,"path":"mdroot/绘制进阶/光照/光照纹理.md","ref":"mdroot/绘制进阶/光照/光照纹理.md","articles":[]},{"title":"基于物理的着色","level":"1.6.1.3","depth":3,"path":"mdroot/绘制进阶/光照/基于物理的着色.md","ref":"mdroot/绘制进阶/光照/基于物理的着色.md","articles":[]},{"title":"后处理特效","level":"1.6.1.4","depth":3,"path":"mdroot/绘制进阶/后处理特效.md","ref":"mdroot/绘制进阶/后处理特效.md","articles":[]}]},{"title":"全屏幕多边形","level":"1.6.2","depth":2,"path":"mdroot/绘制进阶/后处理特效/全屏幕多边形.md","ref":"mdroot/绘制进阶/后处理特效/全屏幕多边形.md","articles":[]},{"title":"后处理特效汇总","level":"1.6.3","depth":2,"path":"mdroot/绘制进阶/后处理特效/后处理特效汇总.md","ref":"mdroot/绘制进阶/后处理特效/后处理特效汇总.md","articles":[]},{"title":"HDR","level":"1.6.4","depth":2,"path":"mdroot/绘制进阶/HDR.md","ref":"mdroot/绘制进阶/HDR.md","articles":[{"title":"HDR 简介","level":"1.6.4.1","depth":3,"path":"mdroot/绘制进阶/HDR/HDR 简介.md","ref":"mdroot/绘制进阶/HDR/HDR 简介.md","articles":[]},{"title":"泛光特效","level":"1.6.4.2","depth":3,"path":"mdroot/绘制进阶/HDR/泛光特效.md","ref":"mdroot/绘制进阶/HDR/泛光特效.md","articles":[]},{"title":"绘制流程","level":"1.6.4.3","depth":3,"path":"mdroot/绘制进阶/HDR/绘制流程.md","ref":"mdroot/绘制进阶/HDR/绘制流程.md","articles":[]}]},{"title":"阴影","level":"1.6.5","depth":2,"path":"mdroot/绘制进阶/阴影.md","ref":"mdroot/绘制进阶/阴影.md","articles":[{"title":"阴影映射","level":"1.6.5.1","depth":3,"path":"mdroot/绘制进阶/阴影/阴影映射.md","ref":"mdroot/绘制进阶/阴影/阴影映射.md","articles":[]},{"title":"点光源阴影与全向阴影贴图","level":"1.6.5.2","depth":3,"path":"mdroot/绘制进阶/阴影/点光源阴影与全向阴影贴图.md","ref":"mdroot/绘制进阶/阴影/点光源阴影与全向阴影贴图.md","articles":[]},{"title":"级联阴影映射","level":"1.6.5.3","depth":3,"path":"mdroot/绘制进阶/阴影/级联阴影映射.md","ref":"mdroot/绘制进阶/阴影/级联阴影映射.md","articles":[]}]},{"title":"骨骼动画","level":"1.6.6","depth":2,"path":"mdroot/绘制进阶/骨骼动画.md","ref":"mdroot/绘制进阶/骨骼动画.md","articles":[]}]},"previous":{"title":"Shader 初见：图像处理","level":"1.5.11.2","depth":3,"path":"mdroot/Vulkan 进阶/Compute Shader/Shader 初见：图像处理.md","ref":"mdroot/Vulkan 进阶/Compute Shader/Shader 初见：图像处理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","github-buttons","expandable-chapters-small","splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github-buttons":{"buttons":[{"user":"GavinKG","repo":"ILearnVulkanFromScratch-CN","type":"star","size":"small"}]},"expandable-chapters-small":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gavin KG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vulkan 学习笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"mdroot/Vulkan 进阶/Compute Shader/GPU 粒子系统.md","mtime":"2019-07-28T07:51:48.630Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-28T08:21:14.502Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GPU 粒子系统初步","level":"1.5.11.3","depth":3,"next":{"title":"GPU 粒子系统进阶：N体模拟","level":"1.5.11.4","depth":3,"path":"mdroot/Vulkan 进阶/Compute Shader/GPU 粒子系统进阶：N体模拟.md","ref":"mdroot/Vulkan 进阶/Compute Shader/GPU 粒子系统进阶：N体模拟.md","articles":[]},"previous":{"title":"Shader 初见：图像处理","level":"1.5.11.2","depth":3,"path":"mdroot/Vulkan 进阶/Compute Shader/Shader 初见：图像处理.md","ref":"mdroot/Vulkan 进阶/Compute Shader/Shader 初见：图像处理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","github-buttons","expandable-chapters-small","splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github-buttons":{"buttons":[{"user":"GavinKG","repo":"ILearnVulkanFromScratch-CN","type":"star","size":"small"}]},"expandable-chapters-small":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gavin KG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vulkan 学习笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"mdroot/Vulkan 进阶/Compute Shader/GPU 粒子系统初步.md","mtime":"2019-07-29T05:07:55.530Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-29T15:29:41.572Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
