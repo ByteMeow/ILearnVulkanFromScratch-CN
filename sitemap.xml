@@ -2,12 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/引用.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/引用/笔记主要参考来源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/引用/参考资料.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20命名和使用规范.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/准备流程.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/准备流程/工程准备.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/准备流程/使用%20GFLW%20创建窗口.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/准备流程/初始化%20Vulkan%20实例.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/准备流程/验证层.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/准备流程/借助%20GFLW%20创建%20Surface.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
