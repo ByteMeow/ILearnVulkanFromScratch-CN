@@ -25,7 +25,6 @@
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/绘制几何体/顶点缓冲.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/绘制几何体/Staging%20Buffer.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/绘制几何体/索引缓冲.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/绘制几何体/自定义缓冲内存分配器.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/资源描述与%20Uniform%20缓冲.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/资源描述与%20Uniform%20缓冲/资源描述.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/Vulkan%20基础/资源描述与%20Uniform%20缓冲/UBO.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
