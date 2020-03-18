@@ -117,6 +117,9 @@
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/绘制进阶/光照/拟真光照模型.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/绘制进阶/光照/光照纹理.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/绘制进阶/光照/基于物理的着色.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/绘制进阶/光照/基于物理的着色/PBR%20通俗理解.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/绘制进阶/光照/基于物理的着色/IBL.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/绘制进阶/光照/基于物理的着色/实现.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/绘制进阶/后处理特效.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/绘制进阶/后处理特效/全屏幕多边形.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://gavinkg.github.io/ILearnVulkanFromScratch-CN/mdroot/绘制进阶/后处理特效/后处理特效汇总.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
