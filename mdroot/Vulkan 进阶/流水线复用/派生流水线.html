@@ -25,6 +25,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -2246,7 +2254,6 @@
                                 
                                 <h2 id="&#x6D3E;&#x751F;&#x6D41;&#x6C34;&#x7EBF;">&#x6D3E;&#x751F;&#x6D41;&#x6C34;&#x7EBF;</h2>
 <p><a href="https://github.com/SaschaWillems/Vulkan/tree/master/examples/pipelines" target="_blank">https://github.com/SaschaWillems/Vulkan/tree/master/examples/pipelines</a></p>
-<p>&#x5728;&#x4E00;&#x5E27;&#x56FE;&#x5F62;&#x4E2D;&#x6211;&#x4EEC;&#x5F80;&#x5F80;&#x8981;&#x7ED3;&#x5408;&#x4E0A;&#x4E0D;&#x540C;&#x7684; shader&#xFF0C;&#x4EE5;&#x53CA;&#x4E0D;&#x540C;&#x7684;&#x6D41;&#x6C34;&#x7EBF;&#x53C2;&#x6570;&#x6765;&#x63D0;&#x4EA4; Draw Call&#xFF0C;&#x800C;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x6D41;&#x6C34;&#x7EBF;&#x5BF9;&#x4E8E;&#x9A71;&#x52A8;&#x662F;&#x4E00;&#x9879;&#x91CD;&#x5DE5;&#x7A0B;&#xFF08;&#x4F8B;&#x5982;&#x7F16;&#x8BD1;shader&#xFF09;&#xFF0C;&#x82E5;&#x5E94;&#x7528;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x521B;&#x5EFA;&#x6D41;&#x6C34;&#x7EBF;&#x66F4;&#x4F1A;&#x4EA7;&#x751F;&#x663E;&#x8457;&#x7684;&#x5361;&#x987F;&#x3002;&#x5E78;&#x597D;&#xFF0C;Vulkan &#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x90E8;&#x5206;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x597D;&#x7684;&#x6D41;&#x6C34;&#x7EBF;&#x6765;&#x521B;&#x9020;&#x51FA;&#x65B0;&#x7684;&#x6D41;&#x6C34;&#x7EBF;&#xFF0C;&#x4F8B;&#x5982;&#x53EA;&#x4FEE;&#x6539; shader stages&#xFF0C;&#x4ECE;&#x800C;&#x52A0;&#x901F;&#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x3002;&#x8FD9;&#x4E9B;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6D41;&#x6C34;&#x7EBF;&#x5C31;&#x88AB;&#x79F0;&#x4E3A;&#x539F;&#x59CB;&#x6D41;&#x6C34;&#x7EBF;&#x7684;&#x6D3E;&#x751F;&#x6D41;&#x6C34;&#x7EBF;&#xFF08;pipeline derivatives&#xFF09;&#x3002;</p>
 <p>&#x5728;&#x4F7F;&#x7528;<code>vkCreateGraphicsPipelines</code>&#x521B;&#x5EFA;&#x539F;&#x59CB;&#x6D41;&#x6C34;&#x7EBF;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x4F20;&#x5165;&#x7684;<code>VkGraphicsPipelineCreateInfo</code> &#x4E2D;&#x7684; <code>flags</code> &#x6210;&#x5458;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x4E3A; <code>VK_PIPELINE_CREATE_ALLOW_DERIVATIVES_BIT</code>&#xFF0C;&#x5373;&#x544A;&#x8BC9; Vulkan &#x8FD9;&#x4E2A;&#x6D41;&#x6C34;&#x7EBF;&#x5141;&#x8BB8;&#x6709;&#x6D3E;&#x751F;&#x6D41;&#x6C34;&#x7EBF;&#x7684;&#x5B58;&#x5728;&#x3002;</p>
 <p>&#x521B;&#x5EFA;&#x5B8C;&#x7B2C;&#x4E00;&#x4E2A;&#x6D41;&#x6C34;&#x7EBF;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5C06;&#x4E4B;&#x540E;&#x6240;&#x521B;&#x5EFA;&#x7684;&#x6D3E;&#x751F;&#x6D41;&#x6C34;&#x7EBF;&#x7684;&#x539F;&#x59CB;&#x6D41;&#x6C34;&#x7EBF;&#x5236;&#x5B9A;&#x51FA;&#x6765;&#xFF0C;&#x5373;&#x521A;&#x521A;&#x521B;&#x5EFA;&#x597D;&#x7684;&#x6D41;&#x6C34;&#x7EBF;&#x3002;&#x5728; create info &#x4E2D;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#xFF1A;</p>
 <ul>
@@ -2299,7 +2306,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"派生流水线","level":"1.10.1.1","depth":3,"next":{"title":"流水线缓存","level":"1.10.1.2","depth":3,"path":"mdroot/Vulkan 进阶/流水线复用/流水线缓存.md","ref":"mdroot/Vulkan 进阶/流水线复用/流水线缓存.md","articles":[]},"previous":{"title":"流水线复用","level":"1.10.1","depth":2,"path":"mdroot/Vulkan 进阶/流水线复用.md","ref":"mdroot/Vulkan 进阶/流水线复用.md","articles":[{"title":"派生流水线","level":"1.10.1.1","depth":3,"path":"mdroot/Vulkan 进阶/流水线复用/派生流水线.md","ref":"mdroot/Vulkan 进阶/流水线复用/派生流水线.md","articles":[]},{"title":"流水线缓存","level":"1.10.1.2","depth":3,"path":"mdroot/Vulkan 进阶/流水线复用/流水线缓存.md","ref":"mdroot/Vulkan 进阶/流水线复用/流水线缓存.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","github-buttons","expandable-chapters-small","splitter","sitemap-general"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-general":{"prefix":"https://gavinkg.github.io/ILearnVulkanFromScratch-CN/"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"GavinKG","repo":"ILearnVulkanFromScratch-CN","type":"star","size":"small"}]},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gavin KG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vulkan 学习笔记","language":"zh-hans","gitbook":"*","description":"Vulkan 学习笔记"},"file":{"path":"mdroot/Vulkan 进阶/流水线复用/派生流水线.md","mtime":"2019-09-06T04:59:09.363Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T15:57:47.500Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"派生流水线","level":"1.10.1.1","depth":3,"next":{"title":"流水线缓存","level":"1.10.1.2","depth":3,"path":"mdroot/Vulkan 进阶/流水线复用/流水线缓存.md","ref":"mdroot/Vulkan 进阶/流水线复用/流水线缓存.md","articles":[]},"previous":{"title":"流水线复用","level":"1.10.1","depth":2,"path":"mdroot/Vulkan 进阶/流水线复用.md","ref":"mdroot/Vulkan 进阶/流水线复用.md","articles":[{"title":"派生流水线","level":"1.10.1.1","depth":3,"path":"mdroot/Vulkan 进阶/流水线复用/派生流水线.md","ref":"mdroot/Vulkan 进阶/流水线复用/派生流水线.md","articles":[]},{"title":"流水线缓存","level":"1.10.1.2","depth":3,"path":"mdroot/Vulkan 进阶/流水线复用/流水线缓存.md","ref":"mdroot/Vulkan 进阶/流水线复用/流水线缓存.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","github-buttons","expandable-chapters-small","splitter","sitemap-general","page-toc","katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-general":{"prefix":"https://gavinkg.github.io/ILearnVulkanFromScratch-CN/"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"GavinKG","repo":"ILearnVulkanFromScratch-CN","type":"star","size":"small"}]},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gavin KG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vulkan 学习笔记","language":"zh-hans","gitbook":"*","description":"Vulkan 学习笔记"},"file":{"path":"mdroot/Vulkan 进阶/流水线复用/派生流水线.md","mtime":"2020-03-26T06:09:30.096Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-28T10:42:11.314Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2318,6 +2325,14 @@
     
         
         <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         
